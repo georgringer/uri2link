@@ -54,11 +54,11 @@ class UrlParser implements SingletonInterface
                 $uriParts['url'] = $this->pageLinkHandler->asString($parameters);;
                 return $this->typoLinkCodecService->encode($uriParts);
             } else {
-//                print_r($parameters);
-//                die;
+                print_r($parameters);
+                die;
             }
         } catch (\Exception $e) {
-//            die($e->getMessage());
+            die($e->getMessage());
         }
 
         return $uri;
@@ -71,9 +71,13 @@ class UrlParser implements SingletonInterface
             'pagetype' => $pageArguments->getPageType() !== '0' ? $pageArguments->getPageType() : ''
         ];
         $extraParams = [];
+        if (!empty($pageArguments->getStaticArguments())) {
+            $extraParams = $extraParams + $pageArguments->getStaticArguments();
+        }
         if ($routeResult->getLanguage() && $routeResult->getLanguage()->getLanguageId() > 0) {
             $extraParams['L'] = $routeResult->getLanguage()->getLanguageId();
         }
+
         if (!empty($extraParams)) {
             $parameters['parameters'] = http_build_query($extraParams, '', '&', PHP_QUERY_RFC3986);
         }

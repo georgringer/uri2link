@@ -13,7 +13,6 @@ All links in fields in TCA properties with `renderType=inputLink` are checked, l
 
 ## Todos
 
-- Support for links to records like news
 - Support RTE
 - Command call for mass checking
 

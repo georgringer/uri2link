@@ -32,7 +32,11 @@ class DataHandlerHook
     {
         foreach ($fieldArray as $fieldName => $fieldValue) {
             if ($this->fieldShouldBeProcessed($table, $fieldName, $fieldValue)) {
-                $fieldArray[$fieldName] = $this->urlParser->parse($fieldValue);
+                try {
+                    $fieldArray[$fieldName] = $this->urlParser->parse($fieldValue);
+                } catch (\Exception $exception) {
+                    // do nothing
+                }
             }
         }
     }
