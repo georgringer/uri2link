@@ -48,7 +48,7 @@ class UrlParser implements SingletonInterface
                 throw new \RuntimeException(sprintf('No site found for url: %s', $uri), 1568481276);
             }
             $pageArguments = $site->getRouter()->matchRequest($request, $routeResult);
-            $parameters = $this->buildLinkParameters($routeResult, $pageArguments, );
+            $parameters = $this->buildLinkParameters($routeResult, $pageArguments);
 
             if ($this->validateUrl($uri, $parameters, $site)) {
                 $uriParts['url'] = $this->pageLinkHandler->asString($parameters);;
