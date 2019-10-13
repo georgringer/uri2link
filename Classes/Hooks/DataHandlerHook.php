@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace GeorgRinger\Uri2Links\Hooks;
+namespace GeorgRinger\Uri2Link\Hooks;
 
-use GeorgRinger\Uri2Links\Service\UrlParser;
+use GeorgRinger\Uri2Link\Service\UrlParser;
 use TYPO3\CMS\Core\DataHandling\DataHandler;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Utility\StringUtility;

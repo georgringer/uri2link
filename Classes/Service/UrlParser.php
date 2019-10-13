@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace GeorgRinger\Uri2Links\Service;
+namespace GeorgRinger\Uri2Link\Service;
 
 use TYPO3\CMS\Core\Context\Context;
 use TYPO3\CMS\Core\Http\ServerRequest;
