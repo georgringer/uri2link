@@ -25,12 +25,12 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"GeorgRinger\\Uri2Links\\": "Classes"
+			"GeorgRinger\\Uri2Link\\": "Classes"
 		}
 	},
 	"autoload-dev": {
 		"psr-4": {
-			"GeorgRinger\\Uri2Links\\Tests\\": "Tests"
+			"GeorgRinger\\Uri2Link\\Tests\\": "Tests"
 		}
 	},
 	"replace": {
@@ -38,7 +38,7 @@
 	},
 	"extra": {
 		"typo3/cms": {
-			"extension-key": "uri2links"
+			"extension-key": "uri2link"
 		}
 	}
 }
