@@ -4,14 +4,14 @@ declare(strict_types=1);
 namespace FriendsOfTypo3\TtAddress\Tests\Unit\Domain\Model;
 
 /**
- * This file is part of the "uri2links" Extension for TYPO3 CMS.
+ * This file is part of the "uri2link" Extension for TYPO3 CMS.
  *
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  */
 
-use GeorgRinger\Uri2Links\Hooks\DataHandlerHook;
-use GeorgRinger\Uri2Links\Service\UrlParser;
+use GeorgRinger\Uri2Link\Hooks\DataHandlerHook;
+use GeorgRinger\Uri2Link\Service\UrlParser;
 use TYPO3\CMS\Core\DataHandling\DataHandler;
 use TYPO3\TestingFramework\Core\BaseTestCase;
 
