@@ -6,7 +6,6 @@ namespace GeorgRinger\Uri2Link\Hooks;
 use GeorgRinger\Uri2Link\Service\UrlParser;
 use TYPO3\CMS\Core\DataHandling\DataHandler;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Core\Utility\StringUtility;
 
 class DataHandlerHook
 {
@@ -54,8 +53,8 @@ class DataHandlerHook
             return false;
         }
 
-        if ($GLOBALS['TCA'][$tableName]['columns'][$fieldName]['config']['renderType'] === 'inputLink'
-            && (StringUtility::beginsWith($fieldValue, 'http') || StringUtility::beginsWith($fieldValue, '/'))
+        if (($GLOBALS['TCA'][$tableName]['columns'][$fieldName]['config']['renderType'] ?? '') === 'inputLink'
+            && (str_starts_with($fieldValue, 'http') || str_starts_with($fieldValue, '/'))
         ) {
             return true;
         }

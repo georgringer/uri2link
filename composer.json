@@ -21,8 +21,8 @@
 		"GPL-2.0-or-later"
 	],
 	"require": {
-		"typo3/cms-core": "^9.5.9|| ^10.0",
-		"typo3/cms-frontend": "^9.5.9|| ^10.0"
+		"typo3/cms-core": "^11.5.34 || ^12.4.10",
+		"typo3/cms-frontend": "^11.5.34 || ^12.4.10"
 	},
 	"autoload": {
 		"psr-4": {
@@ -33,9 +33,6 @@
 		"psr-4": {
 			"GeorgRinger\\Uri2Link\\Tests\\": "Tests"
 		}
-	},
-	"replace": {
-		"typo3-ter/uri2link": "self.version"
 	},
 	"extra": {
 		"typo3/cms": {
